@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="bstyles.css">
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="dichvu.html">Dịch vụ</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="product-detail">
+        <img id="product-image" src="cad063319d05cdb65f21cb0db928c8db.jpeg" alt="Sản phẩm">
+        <div class="info">
+            <h2>Đồ chơi gặm hình xương</h2>
+            <h3>30.000 VNĐ</h3>
+            <p class="rating">⭐⭐⭐⭐⭐ (300 đánh giá)</p>
+            <p>📦 Giao hàng nhanh 2h tại TP.HCM</p>
+            <p>🚚 Miễn phí vận chuyển cho đơn từ 25k</p>
+            <button class="buy-btn">
+                <a href="#paymentPopup" class="buy-btn"><strong>Mua ngay</strong></a>
+            </button>
+        </div>
+    </div>
+    <div class="popup" id="paymentPopup">
+        <div class="popup-content">
+            <a href="#sanpham" class="close-btn">&times;</a>
+            <h2>Thanh toán</h2>
+            <div class="payment-options">
+                <label><input type="radio" name="payment-method" checked> Tiền mặt</label>
+                <label><input type="radio" name="payment-method"> Thẻ Debit/Credit</label>
+            </div>
+            <div class="payment-details">
+                <label>Tên ghi trên thẻ:</label>
+                <input type="text" placeholder="Nhập tên trên thẻ">
+                <label>Số thẻ:</label>
+                <input type="text" placeholder="Nhập số thẻ">
+                <div class="expiry-cvv">
+                    <div>
+                        <label>Ngày hết hạn:</label>
+                        <input type="text" placeholder="MM/YY">
+                    </div>
+                    <div>
+                        <label>CVV:</label>
+                        <input type="text" placeholder="CVV">
+                    </div>
+                </div>
+            </div>
+            <button class="pay-btn">Thanh toán</button>
+        </div>
+    </div>
+</body>
+</html>
