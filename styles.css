@@ -26,46 +26,46 @@
     header h2 {
         font-size: 16%;
     }
-    .banner img {
+    banner img {
         justify-content: center;
         align-items: center;
         width: 100%;
         height: auto;
     }
-    .abilities {
+    abilities {
         justify-content: center;
         align-items: center;
         padding: 10px 0;
         display: flex;
         flex-direction: column;
     }
-    .abilities-item {
+    abilities-item {
         width: 100%;
         font-size: 16px;
         margin-bottom: 10px;
     }
-    .produce-list,
-    .product-list {
+    produce-list,
+    product-list {
         flex-direction: column;
         align-items: center;
         justify-content: centter;
     }
-    .produce,
-    .product {
+    produce,
+    product {
         width: 100%;
         margin-bottom: 15px;
     }
-    .produce img,
-    .product img {
+    produce img,
+    product img {
         width: 100%;
         height: auto;
     }
-    .chat-box {
+    chat-box {
         width: 250px;
         bottom: 60px;
         right: 10px;
     }
-    .chat-footer input {
+    chat-footer input {
         font-size: 14px;
     }
 }
