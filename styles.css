@@ -31,6 +31,7 @@
         height: auto;
     }
     .abilities {
+        justify-content: center;
         align-items: center;
         padding: 10px 0;
         display: flex;
@@ -45,6 +46,7 @@
     .product-list {
         flex-direction: column;
         align-items: center;
+        justify-content: centter;
     }
     .produce,
     .product {
