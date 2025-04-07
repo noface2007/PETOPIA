@@ -33,8 +33,6 @@
         height: auto;
     }
     abilities {
-        justify-content: center;
-        align-items: center;
         padding: 10px 0;
         display: flex;
         flex-direction: column;
