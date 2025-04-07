@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+* html {
+    scroll-behavior: smooth;
+}
+* body {
+    background-color: white;
+    color: black;
+}
+/* Header */
+header {
+    margin-top: 5px;
+    position: relative;
+    text-align: center;
+    height: 100px;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    background-color: wheat;
+}
+header h1 {
+    color: black;
+    font-size: 30px;
+}
+header h2 {
+    top: 10px;
+    color: black;
+    font-size: 25px;
+}
+/* Menu */
+.nav {
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+}
+.nav ul {
+    justify-content: space-evenly;
+    display: flex;
+}
+.nav li {
+    display: inline;
+}
+.nav li a {
+    flex: 1;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 20px;
+    font-size: 25px;
+    transition: background-color 0.3s ease;
+}
+.nav li a:hover {
+    background: #bdd99f;
+}
+/* Giới thiệu */
+.produce-list {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.produce img {
+    width: 800px;
+    border-radius: 10px;
+    height: 400px;
+}
+#goi-dich-vu {
+    margin-top: 20px; 
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+table {
+    width: fit-content;
+    border-collapse: collapse;
+    margin-top: 0px;
+    table-layout: auto;
+    align-items: center;
+    margin-bottom: 40px;
+}
+td, th {
+    border: 2px solid #bdd99f;
+    padding: 30px;
+    text-align: center;
+    font-size: 40px;
+}
+th {
+    background-color: #bdd99f;
+    font-weight: bolder;
+    color: black;
+}
+td {
+    font-weight: light;
+    color: black;
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng chăm sóc và bán phụ kiện cho chó</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="dichvu.html">Dịch vụ</a></li>
+            </ul>
+        </nav>
+    </div>
+    <header>
+        <h1><strong>PETOPIA</strong></h1>
+        <h2><i>"Fur-tastic! Chăm sóc thú cưng tận tâm từng sợi lông!"</i></h2>
+    </header>
+    <div class="banner">
+        <img src="486014060_1379749156235214_6469966915776563393_n.png" alt="Kinh nghiệm chăm sóc thú cưng" class="banner-img">
+    </div>
+    <section id="kha-nang">
+        <div class="abilities">
+            <div class="abilities-item">Chăm sóc thú cưng tại nhà chu đáo</div>
+            <div class="abilities-item">Đáp ứng được nhu cầu của khách hàng</div>
+            <div class="abilities-item">Sáng tạo và làm đồ thủ công tốt</div>
+        </div>
+    </section>
+    <section id="san-pham">
+        <div class="produce-list">
+            <div class="produce"><img src="love.png" alt="Sản phẩm 1"></div>
+            <div class="produce"><img src="love (1).png" alt="Sản phẩm 3"></div>
+            <div class="produce"><img src="love (2).png" alt="Sản phẩm 4"></div>
+        </div>
+    </section>
+    <div class="achievements">
+        <h2><p class="san-pham"></p><strong>Bộ sưu tập cho thú cưng</strong></h2>
+    </div>
+    <section class="product-list">
+        <div class="product">
+            <a href="product1.html">
+                <img src="day-dat-vong-co-cho-meo-Nupet-1.jpg" alt="Dây dắt và vòng cổ">
+                <h2>Dây dắt và vòng cổ</h2>
+                <p>25.000 VNĐ</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="product2.html">
+                <img src="set-do-cho-meo-mau-xanh-de-chiu.webp" alt="Áo/quần cho chó">
+                <h2>Áo và quần cho chó</h2>
+                <p>50.000 VNĐ</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="product3.html">
+                <img src="b44cd734-0b7c-459a-a7b2-0749f76419f0_721bfecc5ec2487b8e843149a53fe0af_1024x1024.jpeg" alt="Bát ăn uống">
+                <h2>Bát ăn uống</h2>
+                <p>30.000 VNĐ</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="product4.html">
+                <img src="do-choi-cho-cho-meo-paw-hinh-con-ga.jpg" alt="Đồ chơi có tiếng kêu">
+                <h2>Đồ chơi có tiếng kêu</h2>
+                <p>50.000 VNĐ</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="product5.html">
+                <img src="cad063319d05cdb65f21cb0db928c8db.jpeg" alt="Đồ chơi gặm hình xương">
+                <h2>Đồ chơi gặm hình xương</h2>
+                <p>30.000 VNĐ</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="product6.html">
+                <img src="set-6-bong-gai-silicon-toyshouse-he0207-1.jpg" alt="Bóng gặm mềm silicon">
+                <h2>Bóng gặm mềm silicon</h2>
+                <p>45.000 VNĐ</p>
+            </a>
+        </div>
+    </section>
+    <section id="lien-he">
+        <div class="chat-container">
+            <input type="checkbox" id="chat-toggle" class="chat-toggle" hidden>
+            <label for="chat-toggle" class="chat-button" onclick="toggleChat()"><strong>Hỗ trợ</strong></label>
+            <div class="chat-box" id="chat-box">
+                <div class="chat-header">
+                    <span><strong>Trò chuyện với chúng mình</strong></span>
+                    <label for="chat-toggle" class="close-chat" onclick="closeChat()">✖</label>
+                </div>
+                <div class="chat-body" id="messages">
+                    <p>Xin chào! Chúng mình có thể giúp gì cho bạn?😊</p>
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="user-message" placeholder="Nhập tin nhắn...">
+                    <button onclick="sendMessage()">Gửi</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Dữ liệu câu hỏi và câu trả lời
+        const faq = {
+            "có gì": "Cửa hàng tụi mình chuyên chăm sóc thú cưng như tắm, vệ sinh răng miệng cho chó và có bán đủ loại phụ kiện, đồ chơi siêu xinh để bạn mua tặng cún yêu hoặc làm quà cho bạn bè! 🐶🎁",
+            "giờ": "🕗 Chúng mình làm việc từ 9:00 sáng đến 9:30 tối, từ thứ 2 đến thứ 6.",
+            "địa chỉ": "📍 Chúng mình có cửa hàng tại 153/15/11 Nguyễn Thượng Hiền, P. 6, Q. Bình Thạnh, Ho Chi Minh City",
+            "liên hệ": "📧 Bạn có thể liên hệ với chúng mình qua email: to1nhacaidentuchaua@gmail.com.",
+            "giá": "💵 Giá phụ kiện và đồ chơi của chúng mình dao động từ 25.000 VND đến 50.000 VND tùy theo loại."
+        };
+        // Hiện/ẩn cửa sổ chat khi nhấn nút hỗ trợ
+        function toggleChat() {
+            const chatBox = document.getElementById('chat-box');
+            chatBox.style.display = chatBox.style.display === 'block' ? 'none' : 'block';
+        }
+        // Đóng cửa sổ chat khi nhấn nút x
+        function closeChat() {
+            const chatBox = document.getElementById('chat-box');
+            chatBox.style.display = 'none';
+        }
+        // Gửi tin nhắn và trả lời từ bot
+        function sendMessage() {
+            const messageInput = document.getElementById('user-message');
+            const message = messageInput.value.trim();
+            const messagesDiv = document.getElementById('messages');
+            if (message) {
+                // Hiển thị tin nhắn người dùng
+                const userMessageDiv = document.createElement('div');
+                userMessageDiv.textContent = '👥: ' + message;
+                messagesDiv.appendChild(userMessageDiv);
+                // Xoá ô nhập tin nhắn
+                messageInput.value = '';
+                // Phản hồi tự động từ bot
+                const botResponse = getBotResponse(message);
+                setTimeout(function () {
+                    const botMessageDiv = document.createElement('div');
+                    botMessageDiv.textContent = '👩‍💼: ' + botResponse;
+                    messagesDiv.appendChild(botMessageDiv);
+                    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+                }, 1000);
+            }
+        }
+        // Hàm tìm kiếm câu trả lời của bot dựa trên từ khóa
+        function getBotResponse(userMessage) {
+            // Chuyển câu hỏi của người dùng thành chữ thường để dễ so sánh
+            const lowerCaseMessage = userMessage.toLowerCase();
+            // Kiểm tra nếu câu hỏi người dùng chứa từ khóa nào trong FAQ
+            for (const keyword in faq) {
+                if (lowerCaseMessage.includes(keyword)) {
+                    return faq[keyword];  // Trả lời từ FAQ
+                }
+            }
+            // Nếu không có từ khóa phù hợp, trả lời mặc định
+            return "Cảm ơn bạn đã liên hệ, chúng mình sẽ trả lời sớm nhất!😊⏳";
+        }
+    </script>        
+</body>
+<footer>
+    <div class="foot">
+        <h4><p class="foot"></p><i>Copyright &copy; 2025 PETOPIA. Tất cả quyền được bảo lưu.</i></h4>
+    </div>
+</footer>
+</html>

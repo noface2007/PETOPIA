@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="bstyles.css">
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="dichvu.html">Dịch vụ</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="product-detail">
+        <img id="product-image" src="day-dat-vong-co-cho-meo-Nupet-1.jpg" alt="Sản phẩm">
+        <div class="info">
+            <h2>Dây dắt và vòng cổ</h2>
+            <h3>25.000 VNĐ</h3>
+            <p class="rating">⭐⭐⭐ (251 đánh giá)</p>
+            <p>📦 Giao hàng nhanh 2h tại TP.HCM</p>
+            <p>🚚 Miễn phí vận chuyển cho đơn từ 25k</p>
+            <button class="buy-btn" onclick="openPayment()"><strong>Mua ngay</strong></a></button>
+        </div>
+    <div class="popup" id="paymentPopup">
+        <div class="popup-content1">
+            <a href="#sanpham" class="close-btn" onclick="closePayment()">&times;</a>
+            <h2>Thanh toán</h2>
+            <div class="payment-options">
+                <label><input type="radio" name="payment-method" checked> Tiền mặt</label>
+                <label><input type="radio" name="payment-method"> Thẻ Debit/Credit</label>
+            </div>
+            <div class="payment-details">
+                <label>Tên ghi trên thẻ:</label>
+                <input type="text" placeholder="Nhập tên trên thẻ">
+                <label>Số thẻ:</label>
+                <input type="text" placeholder="Nhập số thẻ">
+                <div class="expiry-cvv">
+                    <div>
+                        <label>Ngày hết hạn:</label>
+                        <input type="text" placeholder="MM/YY">
+                    </div>
+                    <div>
+                        <label>CVV:</label>
+                        <input type="text" placeholder="CVV">
+                    </div>
+                </div>
+            </div>
+            <button class="pay-btn" onclick="showSuccess()">Thanh toán</button>
+        </div>
+    </div>
+    <div class="popup" id="successPopup" style="display: none;">
+        <div class="popup-content2">
+            <a href="#sanpham" class="close-btn" onclick="closeSuccess()">&times;</a>
+            <h2>🎉 Thanh toán thành công!</h2>
+            <p>Đơn hàng của bạn đang được xử lý và sẽ sớm giao đến bạn.🐾</p>
+        </div>
+    </div>
+    <script>
+        function openPayment() {
+        document.getElementById('paymentPopup').style.display = 'flex'; // Hiện popup thanh toán
+        document.getElementById('successPopup').style.display = 'none'; // Ẩn popup thành công nếu đang mở
+        }
+        function closePayment() {
+            document.getElementById('paymentPopup').style.display = 'none';
+        }
+        function showSuccess() {
+            // Ẩn popup thanh toán
+            document.getElementById('paymentPopup').style.display = 'none';
+            // Hiện popup thành công
+            document.getElementById('successPopup').style.display = 'flex';
+        }
+        function closeSuccess() {
+            // Ẩn popup thành công
+            document.getElementById('successPopup').style.display = 'none';
+        }
+    </script>    
+</body>
+</html>

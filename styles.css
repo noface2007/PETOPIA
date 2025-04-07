@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+* html {
+    scroll-behavior: smooth;
+}
+* body {
+    background-color: white;
+    color: black;
+}
+@media (max-height: 1300px) {
+    body {
+        font-size: 14px !important;
+    }
+    header {
+        height: auto;
+        padding: 20px 10px;
+        text-align: center;
+    }
+    header h1 {
+        font-size: 15px;
+        text-align: center;
+        position: static;
+    }
+    header h2 {
+        font-size: 10px;
+        text-align: center;
+        position: static;
+    }
+    .banner img {
+        width: 100%;
+        height: auto;
+    }
+    .abilities {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+    .abilities-item {
+        font-size: 20px;
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+    .produce-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .produce img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+    }
+    .product {
+        width: 90%;
+        padding: 10px;
+    }
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+    .chat-box {
+        width: 250px;
+        bottom: 60px;
+        right: 10px;
+    }
+    .chat-footer input {
+        font-size: 14px;
+    }
+}
+/* Header */
+header {
+    position: relative;
+    margin-top: 5px;
+    text-align: center;
+    height: 235px;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: -1;
+    background: url('485077857_1772770510240411_1749790447467706645_n.gif') no-repeat center/cover;
+}
+header h1 {
+    position: relative;
+    z-index: 1;
+    color: black;
+    font-size: 150px;
+}
+header h2 {
+    position: relative;
+    top: -40px;
+    z-index: 1;
+    color: black;
+    font-size: 65px;
+}
+/* Menu */
+.nav {
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+}
+.nav ul {
+    justify-content: space-evenly;
+    display: flex;
+}
+.nav li {
+    display: inline;
+}
+.nav li a {
+    flex: 1;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 20px;
+    font-size: 25px;
+    transition: background-color 0.3s ease;
+}
+.nav li a:hover {
+    background: #bdd99f;
+}
+/* Quảng cáo*/
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner img {
+    width: 1500px;
+    height: 650px;
+    border-radius: 10px;
+    margin-top: 0px;
+}
+/* Trang chủ */
+.abilities {
+    padding: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content:center;
+    text-align: center;
+}
+.abilities-item:hover {
+    background: wheat;
+    transform: scale(1.05);
+}
+.abilities-item {
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    background-color: #bdd99f;
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    height: 130px;
+}
+/* Sản Phẩm */
+.produce-list {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.produce img {
+    width: 550px;
+    border-radius: 10px;
+    height: 350px;
+}
+/* Hàng */
+.achievements h2{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.product-list {
+    gap: 20px;
+    justify-content: center;
+    flex: wrap;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto; 
+}
+.product {
+    width: 300px;
+    border-radius: 10px;
+    border: 5px solid #869c6f;
+    padding: 15px;
+    background-color: #bdd99f;
+    text-align: left;
+    transition: 0.3s;
+}
+.product img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.product h2 {
+    font-size: 25px;
+    margin: 10px 0;
+    color: black;
+}
+.product p {
+    color: rgb(197, 28, 28);
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+.product:hover {
+    transform: scale(1.05);
+    background: wheat;
+}
+/* Container chat */
+.chat-container {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+/* Ẩn checkbox */
+.chat-toggle {
+    display: none;
+}
+/* Nút bật chat */
+.chat-button {
+    background-color: orange;
+    color: whitesmoke;
+    padding: 10px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 22px;
+    display: inline-block;
+}
+.chat-button:hover {
+    transform: scale(1.05);
+}
+/* Khung chat */
+.chat-box {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    width: 570px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+/* Khi checkbox được chọn, hiển thị chat */
+.chat-toggle:checked + .chat-button + .chat-box {
+    display: block;
+}
+/* Header chat */
+.chat-header {
+    background: orange;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+    font-size: 25px;
+}
+.chat-header:hover {
+    transform: scale(1.05);
+}
+/* Nút đóng chat */
+.close-chat {
+    cursor: pointer;
+}
+/* Nội dung chat */
+.chat-body {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    color: black;
+    height: 400px;
+}
+.chat-body p {
+    font-weight:bold;
+    font-size: 23px;
+    color: #869c6f;
+    text-align: center;
+}
+/* Nhập tin nhắn */
+.chat-footer {
+    display:flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+.chat-footer input {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.chat-footer button {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.chat-footer button:hover {
+    transform: scale(1.05);
+}
+#messages {
+    line-height: 1.6;
+    margin-bottom: 8px;
+    padding: 0 10px;
+}
+#messages div {
+    font-size: 22px; 
+    margin-bottom: 10px;
+}
+/* Footer */
+.foot {
+    text-align: right;
+    align-items: start;
+    font-weight: lighter;
+    padding-bottom: 10px;
+    color: black;
+}
